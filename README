@@ -4,17 +4,5 @@ HTTP requests to the NASA Kennedy Space Center WWW server
 
 Dataset oficial: https://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html
 
-Requisitos:
-É necessário instalar o Spark em um ambiente de sua preferência. O teste foi criado e executado em um ambiente Linux (Mint 18).
-
-Maiores informações:
-
-[Install Spark on Ubuntu (PySpark)] (https://medium.com/@GalarnykMichael/install-spark-on-ubuntu-pyspark-231c45677de0)
-
-Caso faça o clone e queira rodar o script, é necessário baixar e extrair os seguintes datasets na pasta 'data' do projeto:
-
 [NASA_access_log_Jul95.gz] (ftp://ita.ee.lbl.gov/traces/NASA_access_log_Jul95.gz)
 [NASA_access_log_Aug95.gz] (ftp://ita.ee.lbl.gov/traces/NASA_access_log_Aug95.gz)
-Para rodar o script python no terminal:
-
-$ ./spark-submit spark_nasa.py
