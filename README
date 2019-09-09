@@ -6,3 +6,127 @@ Dataset oficial: https://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html
 
 [NASA_access_log_Jul95.gz] (ftp://ita.ee.lbl.gov/traces/NASA_access_log_Jul95.gz)
 [NASA_access_log_Aug95.gz] (ftp://ita.ee.lbl.gov/traces/NASA_access_log_Aug95.gz)
+
+
+1ª) Qual o objetivo do comando cache em Spark?
+
+	R: Armazenar variávies do tipo lazy para serem reutilizadas repetidamente. Essas variáveis não ficam na memória, elas só são executadas no momento em que as utilizam, ótimizando o código.
+
+
+2ª) O mesmo código implementado em Spark é normalmente mais rápido que a implementação equivalente em
+MapReduce. Por quê?
+
+	R: Porque o MapeReduce grava os dados em disco, enquanto o Spark grava em Memória.     
+
+
+3ª) Qual é a função do SparkContext?
+
+	R: Serve para conectar uma linguagem de programação ou um cluster ao Spark, disponibilizando recursos e executando tarefas. 
+
+
+4ª) Explique com suas palavras o que é Resilient Distributed Datasets (RDD).
+
+	R: RRD é a distribuição dos dados em vários nós de um cluster, fazendo execuções simultâneas e em caso de falhas de um nó os dados serão reprocessados em um outro nó.
+
+
+5ª) GroupByKey é menos eficiente que reduceByKey em grandes dataset. Por quê?
+
+	R: Porque no ReduceByKey os dados são combinados e a soma dos valores são feitos de forma parcial, somando um a um dos valores encontrados, enquanto no GroupByKey só faz a soma depois de encontrar todos as combinações de elementos, obtendo um maior uso de memória. 
+
+
+
+6ª) Explique o que o código Scala faz (...):
+
+	R:	
+		1ª Linha - faz a leitura de um arquivo
+		2ª Linha - quebrar o texto quando encontrar espaço vazio, fazendo assim a separação das palavras;
+		3ª Linha- faz o mapeamente artribuindo o valor "1" a cada palavra;
+		4ª Linha- faz o a redução agregando as palavras e somando os valores;
+		5ª Linha - salva o arquivo
+
+
+7ª) Responda as seguintes questões devem ser desenvolvidas em Spark utilizando a sua linguagem de preferência.
+1.    Número de hosts únicos.
+2.    O total de erros 404.
+3.    Os 5 URLs que mais causaram erro 404.
+4.    Quantidade de erros 404 por dia.
+5.    O total de bytes retornados.
+
+	R: 
+
+		Código no GitHub: https://github.com/natannasciment0/HTTP-requests-to-the-NASA-Kennedy-Space-Center-WWW-server
+
+
+		1 - Número de hosts únicos é 137978
+
+		2 - O total de erros 404 é de 20901
+
+		3 - Os 5 URLs que mais causaram erro 404 são:
+
+		ts8-1.westwood.ts.ucla.edu/images/Nasa-logo.gif 
+		nexus.mlckew.edu.au/images/nasa-logo.gif 
+		203.13.168.17/images/nasa-logo.gif 
+		203.13.168.24/images/nasa-logo.gif 
+		crl5.crl.com/images/nasa-logo.gif
+
+		4 - Quantidade de erros 404 por dia:
+
+			01/Jul/1995: 316
+			02/Jul/1995: 291
+			03/Jul/1995: 474
+			04/Jul/1995: 359
+			05/Jul/1995: 497
+			06/Jul/1995: 640
+			07/Jul/1995: 570
+			08/Jul/1995: 302
+			09/Jul/1995: 348
+			10/Jul/1995: 398
+			11/Jul/1995: 471
+			12/Jul/1995: 471
+			13/Jul/1995: 532
+			14/Jul/1995: 413
+			15/Jul/1995: 254
+			16/Jul/1995: 257
+			17/Jul/1995: 406
+			18/Jul/1995: 465
+			19/Jul/1995: 639
+			20/Jul/1995: 428
+			21/Jul/1995: 334
+			22/Jul/1995: 192
+			23/Jul/1995: 233
+			24/Jul/1995: 328
+			25/Jul/1995: 461
+			26/Jul/1995: 336
+			27/Jul/1995: 336
+			28/Jul/1995: 94
+			01/Aug/1995: 243
+			03/Aug/1995: 304
+			04/Aug/1995: 346
+			05/Aug/1995: 236
+			06/Aug/1995: 373
+			07/Aug/1995: 537
+			08/Aug/1995: 391
+			09/Aug/1995: 279
+			10/Aug/1995: 315
+			11/Aug/1995: 263
+			12/Aug/1995: 196
+			13/Aug/1995: 216
+			14/Aug/1995: 287
+			15/Aug/1995: 327
+			16/Aug/1995: 259
+			17/Aug/1995: 271
+			18/Aug/1995: 256
+			19/Aug/1995: 209
+			20/Aug/1995: 312
+			21/Aug/1995: 305
+			22/Aug/1995: 288
+			23/Aug/1995: 345
+			24/Aug/1995: 420
+			25/Aug/1995: 415
+			26/Aug/1995: 366
+			27/Aug/1995: 370
+			28/Aug/1995: 410
+			29/Aug/1995: 420
+			30/Aug/1995: 571
+			31/Aug/1995: 526
+
