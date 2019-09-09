@@ -53,10 +53,6 @@ MapReduce. Por quê?
 5.    O total de bytes retornados.
 
 	R: 
-
-		Código no GitHub: https://github.com/natannasciment0/HTTP-requests-to-the-NASA-Kennedy-Space-Center-WWW-server
-
-
 		1 - Número de hosts únicos é 137978
 
 		2 - O total de erros 404 é de 20901
@@ -130,3 +126,5 @@ MapReduce. Por quê?
 			30/Aug/1995: 571
 			31/Aug/1995: 526
 
+Código no GitHub: 
+		https://github.com/natannasciment0/HTTP-requests-to-the-NASA-Kennedy-Space-Center-WWW-server/blob/master/Teste_Nasa_Spark.py
